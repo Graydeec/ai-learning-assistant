@@ -18,9 +18,9 @@ const documentSchema = new mongoose.Schema(
     extractedText: { type: String, default: "" },
     chunks: [
       {
-        contents: { type: String, required: true },
+        content: { type: String, required: true },
         pageNumber: { type: Number, default: 0 },
-        chunkIndex: { type: Number, required },
+        chunkIndex: { type: Number, required: true },
       },
     ],
     uploadDate: { type: Date, default: Date.now },
@@ -39,6 +39,6 @@ const documentSchema = new mongoose.Schema(
 // Index for faster queries
 documentSchema.index({ userId: 1, uploadDate: -1 });
 
-const Document = mongoose.model("Document", documentSChema);
+const Document = mongoose.model("Document", documentSchema);
 
 export default Document;
