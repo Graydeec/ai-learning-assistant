@@ -51,6 +51,7 @@ const LoginPage = () => {
               Sign in to continue your journey
             </p>
           </div>
+
           {/* {Form} */}
           <div className="space-y-5">
             {/* {Email Field} */}

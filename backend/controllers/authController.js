@@ -37,7 +37,7 @@ export const register = async (req, res, next) => {
     });
 
     // Generate token
-    const token = genereateToken(user._id);
+    const token = generateToken(user._id);
 
     res.status(201).json({
       success: true,
@@ -89,7 +89,7 @@ export const login = async (req, res, next) => {
     const isMatch = await user.matchPassword(password);
 
     if (!isMatch) {
-      returnres.status(401).json({
+      return res.status(401).json({
         sucess: false,
         error: "Invalid credentials",
         statusCode: 401,
