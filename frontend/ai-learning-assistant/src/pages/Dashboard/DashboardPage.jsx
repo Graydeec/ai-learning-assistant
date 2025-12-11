@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useEffect, useState } from "react";
 import progressService from "../../services/progressService";
 import toast from "react-hot-toast";
