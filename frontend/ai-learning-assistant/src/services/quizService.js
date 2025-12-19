@@ -23,11 +23,11 @@ const getQuizById = async (quizId) => {
   }
 };
 
-const submitQuiz = async (quizId, answer) => {
+const submitQuiz = async (quizId, answers) => {
   try {
     const response = await axiosInstance.post(
       API_PATHS.QUIZZES.SUBMIT_QUIZ(quizId),
-      { answer }
+      { answers }
     );
     return response.data;
   } catch (error) {

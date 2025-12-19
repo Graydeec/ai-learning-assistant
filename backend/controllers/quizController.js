@@ -55,7 +55,6 @@ export const getQuizById = async (req, res, next) => {
 export const submitQuiz = async (req, res, next) => {
   try {
     const { answers } = req.body;
-
     if (!Array.isArray(answers)) {
       return res.status(400).json({
         success: false,

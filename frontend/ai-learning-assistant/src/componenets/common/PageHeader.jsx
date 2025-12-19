@@ -9,7 +9,7 @@ const PageHeader = ({ title, subtitle, children }) => {
         </h1>
         {subtitle && <p className="text-slate-500 text-sm">{subtitle}</p>}
       </div>
-      {children && <div>children</div>}
+      {children && <div>{children}</div>}
     </div>
   );
 };

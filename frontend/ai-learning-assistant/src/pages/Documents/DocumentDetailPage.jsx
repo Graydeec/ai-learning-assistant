@@ -7,6 +7,9 @@ import Spinner from "../../componenets/common/spinner";
 import PageHeader from "../../componenets/common/PageHeader";
 import Tabs from "../../componenets/common/Tabs";
 import ChatInterface from "../../componenets/chat/ChatInterface";
+import AIActions from "../../componenets/ai/AIActions";
+import FlashcardManager from "../../componenets/flashcards/FlashcardManager";
+import QuizManager from "../../componenets/quizzes/QuizManager";
 
 const DocumentDetailPage = () => {
   const { id } = useParams();
@@ -88,15 +91,15 @@ const DocumentDetailPage = () => {
   };
 
   const renderAIActions = () => {
-    return "rednerFlashcardsTab";
+    return <AIActions />;
   };
 
   const renderFlashcardsTab = () => {
-    return "renderFlashcardsTab";
+    return <FlashcardManager documentId={id} />;
   };
 
   const renderQuizzesTab = () => {
-    return "renderQuizzesTab";
+    return <QuizManager documentId={id} />;
   };
 
   const tabs = [
